@@ -1,5 +1,6 @@
 package example.abstractFactory;
 
-public class UIfactory {
-    
+interface UIFactory {
+    Button createButton();
+    TextField createTextField();
 }
