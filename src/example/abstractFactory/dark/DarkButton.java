@@ -1,5 +1,9 @@
 package example.abstractFactory.dark;
 
-public class DarkButton {
+class DarkButton implements Button {
+    @Override
+    public void render() {
+        System.out.println("темная кнопка");
+    }
     
 }
