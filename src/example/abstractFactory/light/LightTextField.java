@@ -1,5 +1,8 @@
 package example.abstractFactory.light;
 
-public class LightTextField {
-    
+class LightTextField implements TextField {
+    @Override
+    public void render() {
+        System.out.println("светлое текстовое поле");
+    }
 }
