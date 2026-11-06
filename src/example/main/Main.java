@@ -8,6 +8,7 @@ import example.builder.Order;
 import example.factory.Payment;
 import example.factory.PaymentFactory;
 import example.prototype.Product;
+import example.singleton.ShopConfig;
 
 public class Main {
 
@@ -26,6 +27,7 @@ public class Main {
         demoAbstractFactory();
         demoPrototype();
         demoBuilder();
+        demoSingleton();
     }
 
     private static void demoFactory() {
@@ -73,5 +75,21 @@ public class Main {
                 .build();
 
         System.out.println(order);
+    }
+
+    private static void demoSingleton() {
+        System.out.println("\n---паттерн singleton---");
+
+        //имитация обращениий вразных метсах
+        ShopConfig config1 = ShopConfig.INSTANCE;
+        ShopConfig config2 = ShopConfig.INSTANCE;
+
+        System.out.println("config1 == config2: " + (config1 == config2));
+        config1.setShopName("Магазин питбайков");
+        config1.setServerAddress("https://питбайккупить.com");
+        
+        System.out.println("\nconfig1: " + config1);
+        System.out.println("config2: " + config2);
+        System.out.println("\nизменения успешно применены");
     }
 }
