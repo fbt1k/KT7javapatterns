@@ -12,7 +12,7 @@ public enum ShopConfig {
     private boolean texObslyzj = false;
 
     // геттеры и сеттеры дял управления насройками
-    public String getShopName(){return shopname;}
+    public String getShopName(){return shopName;}
     public void setShopName(String shopName) { this.shopName = shopName;}
 
     public String getServerAddress() { return serverAddress; }

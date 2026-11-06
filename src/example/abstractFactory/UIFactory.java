@@ -1,6 +1,6 @@
 package example.abstractFactory;
 
-interface UIFactory {
+public interface UIFactory {
     Button createButton();
     TextField createTextField();
 }

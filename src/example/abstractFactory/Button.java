@@ -1,5 +1,5 @@
 package example.abstractFactory;
 
-interface Button {
+public interface Button {
     void render();
 }

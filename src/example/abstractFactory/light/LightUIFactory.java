@@ -1,6 +1,10 @@
 package example.abstractFactory.light;
 
-class LightUIFactory  implements UIFactory {
+import example.abstractFactory.Button;
+import example.abstractFactory.TextField;
+import example.abstractFactory.UIFactory;
+
+public class LightUIFactory implements UIFactory {
     @Override
     public Button createButton() {
         return new LightButton();
@@ -10,5 +14,4 @@ class LightUIFactory  implements UIFactory {
     public TextField createTextField() {
         return new LightTextField();
     }
-    
 }

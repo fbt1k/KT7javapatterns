@@ -1,6 +1,10 @@
 package example.abstractFactory.dark;
 
-class DarkUIFactory implements UIFactory {
+import example.abstractFactory.Button;
+import example.abstractFactory.TextField;
+import example.abstractFactory.UIFactory;
+
+public class DarkUIFactory implements UIFactory {
     @Override
     public Button createButton() {
         return new DarkButton();
@@ -10,5 +14,4 @@ class DarkUIFactory implements UIFactory {
     public TextField createTextField() {
         return new DarkTextField();
     }
-    
 }

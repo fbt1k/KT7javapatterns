@@ -1,5 +1,5 @@
 package example.abstractFactory;
 
-interface TextField{
+public interface TextField {
     void render();
 }
