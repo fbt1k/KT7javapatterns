@@ -1,5 +1,8 @@
 package example.main;
-
+import example.abstractFactory.Button;
+import example.abstractFactory.TextField;
+import example.abstractFactory.UIFactory;
+import example.abstractFactory.dark.DarkUIFactory;
 import example.factory.Payment;
 import example.factory.PaymentFactory;
 
@@ -16,11 +19,25 @@ public class Main {
         5. Singleton (проверка уникальности экземпляра ShopConfig)
         */
        demoFactory();
+       demoAbstractFactory();
     }
 
     private static void demoFactory() {
-        System.out.println("---паттерн factory method---");
+        System.out.println("\n---паттерн factory method---");
+        
         Payment payment = PaymentFactory.createPayment("card");
         payment.pay(100.0);
     }
+
+    private static void demoAbstractFactory() {
+        System.out.println("\n---паттерн abstract factory---");
+        
+        UIFactory factory = new DarkUIFactory();
+        Button button = factory.createButton();
+        TextField textField = factory.createTextField();
+
+        button.render();
+        textField.render();
+    }
+
 }
