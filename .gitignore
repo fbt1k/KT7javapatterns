@@ -5,3 +5,10 @@
 
 .vscode/
 *.code-workspace
+
+
+.*~
+*.java~
+.LCK*
+
+README.md
