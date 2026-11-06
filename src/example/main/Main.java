@@ -5,6 +5,7 @@ import example.abstractFactory.UIFactory;
 import example.abstractFactory.dark.DarkUIFactory;
 import example.factory.Payment;
 import example.factory.PaymentFactory;
+import example.prototype.Product;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,6 +21,7 @@ public class Main {
         */
        demoFactory();
        demoAbstractFactory();
+       demoPrototype();
     }
 
     private static void demoFactory() {
@@ -39,5 +41,21 @@ public class Main {
         button.render();
         textField.render();
     }
+
+    private static void demoPrototype(){
+        System.out.println("\n---паттерн prototype---");
+
+        Product original = 
+            new Product( "iphone", 999999, "phone");
+        
+        Product copy = original.clone();
+
+        copy.setName("android");
+        copy.setPrice(1000);
+        
+        System.out.println("Оригинал: " + original);
+        System.out.println("Копия: " + copy);        
+    }
+
 
 }
